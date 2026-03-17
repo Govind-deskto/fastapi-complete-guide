@@ -1,18 +1,20 @@
-# Routing in FastAPI
+# Pydantic Models
 
-## 📌 What is Routing?
+## 📌 What is Pydantic?
 
-Routing defines how your API responds to different URLs.
+Used for data validation.
 
 ## 🔹 Example
 
 ```python
-@app.get("/posts")
-def get_posts():
-    return {"data": "All posts"}
+from pydantic import BaseModel
+
+class Post(BaseModel):
+    title: str
+    content: str
 ```
 
-## 🧠 Key Concepts
+## 🧠 Benefits
 
-* Each route handles a request
-* URL defines behavior
+* Validates input
+* Prevents errors
